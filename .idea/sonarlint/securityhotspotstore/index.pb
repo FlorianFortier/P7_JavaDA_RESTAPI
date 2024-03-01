@@ -49,3 +49,6 @@ N
 Poseiden-skeleton/doc/data.sql,e\7\e7bd94d20dd1aa6065001aebed263cc3b7d996f8
 S
 #Poseiden-skeleton/doc/guideline.txt,b\b\bbb693090dc25796a8857d9eaa086436e33b0972
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
