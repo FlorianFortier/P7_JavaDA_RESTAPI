@@ -41,3 +41,11 @@ r
 BPoseiden-skeleton/src/test/java/com/nnk/springboot/TradeTests.java,a\5\a5762d543c9ed51616c4caa2e283e914251b9e89
 z
 JPoseiden-skeleton/src/test/java/com/nnk/springboot/PasswordEncodeTest.java,0\0\00bfd0b3336b8884fbdd58d89f2504ed3dfd3fd6
+L
+Poseiden-skeleton/.gitignore,2\5\259ec82690e7eeb5f6ed673b27d0b9eac0e60a4e
+Z
+*Poseiden-skeleton/spring-boot-skeleton.iml,b\a\bae58535f9675a4c164e4849a193dfaaeb7666e6
+N
+Poseiden-skeleton/doc/data.sql,e\7\e7bd94d20dd1aa6065001aebed263cc3b7d996f8
+S
+#Poseiden-skeleton/doc/guideline.txt,b\b\bbb693090dc25796a8857d9eaa086436e33b0972
