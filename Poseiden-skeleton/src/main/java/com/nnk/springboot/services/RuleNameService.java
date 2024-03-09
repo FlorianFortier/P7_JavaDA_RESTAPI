@@ -11,7 +11,7 @@ import java.util.Optional;
 @Service
 public class RuleNameService {
 
-    private RuleNameRepository ruleNameRepository;
+    private final RuleNameRepository ruleNameRepository;
 
     @Autowired
     public RuleNameService(RuleNameRepository ruleNameRep) {

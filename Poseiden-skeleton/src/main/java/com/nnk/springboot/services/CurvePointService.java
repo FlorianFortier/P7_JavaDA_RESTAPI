@@ -14,11 +14,11 @@ import java.util.Optional;
 @Transactional
 public class CurvePointService {
 
-    private final CurvePointRepository curvePointRep;
+    private final CurvePointRepository curvePointRepository;
 
     @Autowired
     public CurvePointService(CurvePointRepository curvePointRep) {
-        this.curvePointRep = curvePointRep;
+        this.curvePointRepository = curvePointRep;
     }
 
     /**
@@ -27,7 +27,7 @@ public class CurvePointService {
      * @return list of CurvePointModel containing all curve point models
      */
     public List<CurvePoint> getAllCurvePoints() {
-        return curvePointRep.findAll();
+        return curvePointRepository.findAll();
     }
 
     /**
@@ -35,7 +35,7 @@ public class CurvePointService {
      * @param curvePoint the CurvePointModel to save
      */
     public void saveCurvePoint(CurvePoint curvePoint) {
-        curvePointRep.save(curvePoint);
+        curvePointRepository.save(curvePoint);
     }
 
     /**
@@ -44,7 +44,7 @@ public class CurvePointService {
      * @return true if ID already exists
      */
     public boolean checkIfIdExists(int id) {
-        return curvePointRep.existsById(id);
+        return curvePointRepository.existsById(id);
     }
 
     /**
@@ -52,7 +52,7 @@ public class CurvePointService {
      * @param id the curve point ID
      */
     public void deleteCurvePointById(int id) {
-        curvePointRep.deleteById(id);
+        curvePointRepository.deleteById(id);
     }
 
     /**
@@ -62,7 +62,7 @@ public class CurvePointService {
      * @return CurvePointModel found with the ID
      */
     public Optional<CurvePoint> getCurvePointById(int curvePointId) {
-        return curvePointRep.findById(curvePointId);
+        return curvePointRepository.findById(curvePointId);
     }
 
     /**
