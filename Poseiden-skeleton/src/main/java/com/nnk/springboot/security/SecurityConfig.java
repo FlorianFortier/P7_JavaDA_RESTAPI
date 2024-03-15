@@ -22,7 +22,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    public static final String LOGIN = "/login";
+    public static final String LOGIN = "/app/login";
 
     @Qualifier("userDetailsServiceImpl")
     @Autowired
@@ -42,14 +42,14 @@ public class SecurityConfig {
         http.cors(withDefaults())
                 .csrf(withDefaults())
                 .authorizeHttpRequests(requests -> requests
-                        .requestMatchers("/registration", "/login/**", "/registrationConfirm", "/static", "/css/**", "/js/**", "/images/**", "/fonts/**", "/error/**").permitAll()
+                        .requestMatchers("/user/add", "/app/login", "/registrationConfirm", "/static", "/css/**", "/js/**", "/images/**", "/fonts/**", "/error/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin((form) -> form
                         .loginPage(LOGIN)
-                        .defaultSuccessUrl("/transfer.html")
+                        .defaultSuccessUrl("/home")
                         .permitAll()
-                        .failureUrl("/login?error=true")
+                        .failureUrl("/app/error")
                 )
                 .logout(logout ->
                         logout
