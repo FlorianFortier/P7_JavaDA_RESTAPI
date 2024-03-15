@@ -15,7 +15,6 @@ public class BidList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    // TODO : Peux-t-on la modifié pour avoir une long au lieu d'un Integer.
     private Integer id;
     @Column(name = "account")
     private String account;
@@ -85,5 +84,4 @@ public class BidList {
         this.type = type;
         this.bidQuantity = bidQuantity;
     }
-// TODO: Map columns in data table BIDLIST with corresponding java fields
 }

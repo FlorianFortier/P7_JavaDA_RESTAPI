@@ -36,6 +36,4 @@ public class Rating {
         this.fitchRating = fitchRating;
         this.orderNumber = orderNumber;
     }
-
-// TODO: Map columns in data table RATING with corresponding java fields
 }
