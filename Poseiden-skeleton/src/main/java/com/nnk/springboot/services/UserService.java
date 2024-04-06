@@ -4,6 +4,9 @@ package com.nnk.springboot.services;
 import com.nnk.springboot.domain.User;
 import com.nnk.springboot.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -91,5 +94,14 @@ public class UserService {
 	public User setUpUserModel(User user) {
 		user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
 		return user;
+	}
+	public String getCurrentLoggedInUser() {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		if (authentication != null && authentication.getPrincipal() instanceof UserDetails) {
+			UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+			return userDetails.getUsername(); // Cela vous donnera le nom d'utilisateur de l'utilisateur connecté
+		} else {
+			return "Utilisateur non connecté";
+		}
 	}
 }

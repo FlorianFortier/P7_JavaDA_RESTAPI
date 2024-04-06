@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+import javax.validation.constraints.NotNull;
 import java.security.Timestamp;
 
 
@@ -18,7 +19,8 @@ public class CurvePoint {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "curve_id")
+    @Column(name = "curve_id", nullable = false)
+    @NotNull
     private Integer curveId;
 
     @Column(name = "as_of_date")

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.validation.constraints.NotNull;
 import java.security.Timestamp;
 
 
@@ -18,13 +19,16 @@ public class Trade {
     @Column(name = "id")
     private Integer tradeId;
 
-    @Column(name = "account")
+    @Column(name = "account", nullable = false)
+    @NotNull
     private String account;
 
-    @Column(name = "type")
+    @Column(name = "type", nullable = false)
+    @NotNull
     private String type;
 
-    @Column(name = "buy_quantity")
+    @Column(name = "buy_quantity", nullable = false)
+    @NotNull
     private Double buyQuantity;
 
     @Column(name = "sell_quantity")

@@ -3,6 +3,7 @@ package com.nnk.springboot.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import javax.validation.constraints.NotNull;
 import java.security.Timestamp;
 
 @Getter
@@ -16,10 +17,14 @@ public class BidList {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
-    @Column(name = "account")
+
+    @Column(name = "account", nullable = false)
+    @NotNull
     private String account;
 
-    @Column(name = "type")
+
+    @Column(name = "type", nullable = false)
+    @NotNull
     private String type;
 
     @Column(name = "bid_quantity")
@@ -79,8 +84,8 @@ public class BidList {
     @Column(name = "side")
     private String side;
 
-    public BidList(String accountTest, String type, Double bidQuantity) {
-        this.account = accountTest;
+    public BidList(String account, String type, Double bidQuantity) {
+        this.account = account;
         this.type = type;
         this.bidQuantity = bidQuantity;
     }

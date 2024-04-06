@@ -45,8 +45,8 @@ public class BidListService {
      *
      * @param bidList the BidListModel to save
      */
-    public void saveBid(BidList bidList) {
-        bidListRepository.save(bidList);
+    public BidList saveBid(BidList bidList) {
+        return bidListRepository.save(bidList);
     }
 
     /**
