@@ -95,6 +95,11 @@ public class UserService {
 		user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
 		return user;
 	}
+
+	/**
+	 * Get the current logged in user
+	 * @return
+	 */
 	public String getCurrentLoggedInUser() {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		if (authentication != null && authentication.getPrincipal() instanceof UserDetails) {
