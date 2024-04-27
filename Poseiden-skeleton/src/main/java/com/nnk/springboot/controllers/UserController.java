@@ -95,7 +95,6 @@ public class UserController {
      * @return
      */
     private boolean isValidUsername(String username) {
-        // Ajoutez vos règles de validation ici
         return username != null && username.matches("[a-zA-Z0-9]+");
     }
     /**
@@ -106,8 +105,8 @@ public class UserController {
      */
     private boolean isValidPassword(String password) {
         return password != null && password.length() >= 8 &&
-                password.matches(".*\\d.*") && // Vérifie la présence d'au moins un chiffre
-                password.matches(".*[A-Z].*"); // Vérifie la présence d'au moins une majuscule
+                password.matches(".*\\d.*") && // Check the presence of at least 1 number
+                password.matches(".*[A-Z].*"); // Check the presence of at least 1 Caps
     }
 
 
