@@ -1,6 +1,5 @@
-package com.nnk.springboot;
+package com.nnk.springboot.controllers;
 
-import com.nnk.springboot.controllers.TradeController;
 import com.nnk.springboot.domain.Trade;
 import com.nnk.springboot.services.TradeService;
 import com.nnk.springboot.services.UserService;
